@@ -7,14 +7,15 @@ import 'dart:math';
 class MinuteVentilation {}
 
 class Zuurbier extends MinuteVentilation {
-  double getMinuteVentilation(List<HeartRate> heartrates, int gender) {
-    double sumheart = 0;
-    for (int p = 0; p < heartrates.length; p++) {
-      sumheart = sumheart + heartrates[p].value;
-    }
+  double getMinuteVentilation(HeartRate heartrate, int gender) {
+    // double sumheart = 0;
+    // for (int p = 0; p < heartrates.length; p++) {
+    //   sumheart = sumheart + heartrates[p].value;
+    // }
 
-    double valheart =
-        double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    // double valheart =
+    //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    double valheart = heartrate.value;
 
     if (valheart != 0) {
       if (gender == 1) {
@@ -34,14 +35,15 @@ class Zuurbier extends MinuteVentilation {
 
 class Guo extends MinuteVentilation {
   double getMinuteVentilation(
-      {required int gender, required List<HeartRate> heartrates}) {
-    double sumheart = 0;
-    for (int p = 0; p < heartrates.length; p++) {
-      sumheart = sumheart + heartrates[p].value;
-    }
+      {required int gender, required HeartRate heartrate}) {
+    // double sumheart = 0;
+    // for (int p = 0; p < heartrates.length; p++) {
+    //   sumheart = sumheart + heartrates[p].value;
+    // }
 
-    double valheart =
-        double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    // double valheart =
+    //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    double valheart = heartrate.value;
 
     if (valheart != 0) {
       if (gender == 1) {
@@ -59,14 +61,16 @@ class Guo extends MinuteVentilation {
 
 class Greenwald extends MinuteVentilation {
   double getMinuteVentilation(
-      List<HeartRate> heartrates, int gender, int age, double FVC) {
-    double sumheart = 0;
-    for (int p = 0; p < heartrates.length; p++) {
-      sumheart = sumheart + heartrates[p].value;
-    }
+      HeartRate heartrate, int gender, int age, double FVC) {
+    // double sumheart = 0;
+    // for (int p = 0; p < heartrates.length; p++) {
+    //   sumheart = sumheart + heartrates[p].value;
+    // }
 
-    double valheart =
-        double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    // double valheart =
+    //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    double valheart = heartrate.value;
+
     if (valheart != 0) {
       double val = (pow(e, -9.59) *
           pow(valheart, 2.39) *
@@ -81,15 +85,17 @@ class Greenwald extends MinuteVentilation {
 }
 
 class Good extends MinuteVentilation {
-  double getMinuteVentilation(List<HeartRate> heartrates, int gender, int age,
-      double hrRest, double hip) {
-    double sumheart = 0;
-    for (int p = 0; p < heartrates.length; p++) {
-      sumheart = sumheart + heartrates[p].value;
-    }
+  double getMinuteVentilation(
+      HeartRate heartrate, int gender, int age, double hrRest, double hip) {
+    // double sumheart = 0;
+    // for (int p = 0; p < heartrates.length; p++) {
+    //   sumheart = sumheart + heartrates[p].value;
+    // }
 
-    double valheart =
-        double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    // double valheart =
+    //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
+    double valheart = heartrate.value;
+
     if (gender == 2) {
       gender = 0;
     }

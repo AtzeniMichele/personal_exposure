@@ -12,7 +12,7 @@ void main() {
     final guo = Guo();
     final inhalation = Inhalation();
     double ans =
-        guo.getMinuteVentilation(gender: gender, heartrates: heartrates);
+        guo.getMinuteVentilation(gender: gender, heartrate: heartrates[0]);
     double ans2 = inhalation.getInhalation([ans], pms, 'PM1');
   });
 }
