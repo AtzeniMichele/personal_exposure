@@ -15,7 +15,7 @@ class Zuurbier extends MinuteVentilation {
 
     // double valheart =
     //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
-    double valheart = heartrate.value;
+    double valheart = heartrate.heart_rate;
 
     if (valheart != 0) {
       if (gender == 1) {
@@ -43,7 +43,7 @@ class Guo extends MinuteVentilation {
 
     // double valheart =
     //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
-    double valheart = heartrate.value;
+    double valheart = heartrate.heart_rate;
 
     if (valheart != 0) {
       if (gender == 1) {
@@ -69,7 +69,7 @@ class Greenwald extends MinuteVentilation {
 
     // double valheart =
     //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
-    double valheart = heartrate.value;
+    double valheart = heartrate.heart_rate;
 
     if (valheart != 0) {
       double val = (pow(e, -9.59) *
@@ -94,7 +94,7 @@ class Good extends MinuteVentilation {
 
     // double valheart =
     //     double.parse((sumheart / heartrates.length).toStringAsFixed(2));
-    double valheart = heartrate.value;
+    double valheart = heartrate.heart_rate;
 
     if (gender == 2) {
       gender = 0;

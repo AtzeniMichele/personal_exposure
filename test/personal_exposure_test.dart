@@ -4,7 +4,7 @@ import 'package:personal_exposure/personal_exposure.dart';
 
 void main() {
   List<HeartRate> heartrates = [
-    HeartRate(patient: 'username', timestamp: DateTime.now(), value: 60)
+    HeartRate(patient: 'username', timestamp: DateTime.now(), heart_rate: 60)
   ];
   List<Pm> pms = [];
   int gender = 1;
