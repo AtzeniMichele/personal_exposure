@@ -1,7 +1,7 @@
 # This is a generated file; do not edit or check into version control.
-path_provider=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider-2.0.12/
-path_provider_android=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_android-2.0.22/
-path_provider_foundation=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_foundation-2.1.1/
-path_provider_linux=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.7/
-path_provider_windows=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.3/
-sqlite3_flutter_libs=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/sqlite3_flutter_libs-0.5.12/
+path_provider=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider-2.1.1/
+path_provider_android=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_android-2.2.0/
+path_provider_foundation=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.1/
+path_provider_linux=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1/
+sqlite3_flutter_libs=/Users/micheleatzeni/.pub-cache/hosted/pub.dev/sqlite3_flutter_libs-0.5.17/

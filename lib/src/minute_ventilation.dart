@@ -2,7 +2,7 @@
 
 import 'package:impact_database/impact_database.dart';
 
-import 'dart:math';
+import 'dart:math' as math;
 
 class MinuteVentilation {}
 
@@ -20,12 +20,12 @@ class Zuurbier extends MinuteVentilation {
     if (valheart != 0) {
       if (gender == 1) {
         // UOMO
-        double val = pow(e, 1.03 + (0.021 * valheart)) as double;
-        return double.parse((val).toStringAsFixed(2));
+        double val = math.pow(math.e, 1.03 + (0.021 * valheart)) as double;
+        return (val * 100).roundToDouble() / 100;
       } else {
         // DONNA
-        double val = pow(e, 0.57 + (0.023 * valheart)) as double;
-        return double.parse((val).toStringAsFixed(2));
+        double val = math.pow(math.e, 0.57 + (0.023 * valheart)) as double;
+        return (val * 100).roundToDouble() / 100;
       }
     } else {
       return 0;
@@ -47,11 +47,11 @@ class Guo extends MinuteVentilation {
 
     if (valheart != 0) {
       if (gender == 1) {
-        double val = pow(10, 0.559 + (0.007 * valheart)) as double;
-        return double.parse((val).toStringAsFixed(2));
+        double val = math.pow(10, 0.559 + (0.007 * valheart)) as double;
+        return (val * 100).roundToDouble() / 100;
       } else {
-        double val = pow(10, 0.647 + (0.006 * valheart)) as double;
-        return double.parse((val).toStringAsFixed(2));
+        double val = math.pow(10, 0.647 + (0.006 * valheart)) as double;
+        return (val * 100).roundToDouble() / 100;
       }
     } else {
       return 0;
@@ -72,12 +72,12 @@ class Greenwald extends MinuteVentilation {
     double valheart = heartrate.heart_rate;
 
     if (valheart != 0) {
-      double val = (pow(e, -9.59) *
-          pow(valheart, 2.39) *
-          pow(gender, -0.204) *
-          pow(age, 0.274) *
-          pow(FVC, 0.520)) as double;
-      return double.parse((val).toStringAsFixed(2));
+      double val = (math.pow(math.e, -9.59) *
+          math.pow(valheart, 2.39) *
+          math.pow(gender, -0.204) *
+          math.pow(age, 0.274) *
+          math.pow(FVC, 0.520)) as double;
+      return (val * 100).roundToDouble() / 100;
     } else {
       return 0;
     }
@@ -112,7 +112,7 @@ class Good extends MinuteVentilation {
           (10.34 * gender * age / 100) -
           (26.21 * gender * hrRest / 100) +
           (38.78 * gender * hip / 100);
-      return double.parse((val).toStringAsFixed(2));
+      return (val * 100).roundToDouble() / 100;
     } else {
       return 0;
     }
